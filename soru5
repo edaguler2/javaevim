@@ -1,0 +1,12 @@
+public class OddEven {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Bir numara girin: ");
+        int numara = scanner.nextInt();
+        if (numara % 2 == 0) {
+            System.out.println("Sayı çifttir.");
+        } else {
+            System.out.println("Sayi tektir");
+        }
+    }
+}
