@@ -1,0 +1,52 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Hangi geometrik seklin alanini hesaplamak istiyorsunuz? (1-Dikdortgen, 2-Kare, 3-Ucgen)");
+        int choice = Convert.ToInt32(Console.ReadLine());
+
+        switch (choice)
+        {
+            case 1:
+                Console.WriteLine("Dikdortgen alanini hesaplamak icin dikdortgenin kenar uzunluklarini giriniz.");
+                double width = Convert.ToDouble(Console.ReadLine());
+                double height = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("Dikdortgenin alani: " + AreaRectangle(width, height));
+                break;
+
+            case 2:
+                Console.WriteLine("Kare alanini hesaplamak icin karenin kenar uzunlugunu giriniz.");
+                double side = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("Karenin alani: " + AreaSquare(side));
+                break;
+
+            case 3:
+                Console.WriteLine("Ucgen alanini hesaplamak icin ucgenin alan ve tas veger tuslari giriniz.");
+                double baseU = Convert.ToDouble(Console.ReadLine());
+                double heightU = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("Ucgenin alani: " + AreaTriangle(baseU, heightU));
+                break;
+
+            default:
+                Console.WriteLine("Lutfen 1-3 arasinda bir sayi seciniz.");
+                break;
+        }
+    }
+
+    static double AreaRectangle(double width, double height)
+    {
+        return width * height;
+    }
+
+    static double AreaSquare(double side)
+    {
+        return side * side;
+    }
+
+    static double AreaTriangle(double baseU, double heightU)
+    {
+        return 0.5 * baseU * heightU;
+    }
+}
