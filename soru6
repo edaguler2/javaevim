@@ -1,0 +1,21 @@
+function sirala(sayi1, sayi2, sayi3) {
+ let sortedNumbers = [sayi1, sayi2, sayi3];
+
+ for (let i = 0; i < sortedNumbers.length; i++) {
+    for (let j = 0; j < sortedNumbers.length - i - 1; j++) {
+      if (sortedNumbers[j] > sortedNumbers[j + 1]) {
+        let temp = sortedNumbers[j];
+        sortedNumbers[j] = sortedNumbers[j + 1];
+        sortedNumbers[j + 1] = temp;
+      }
+    }
+ }
+
+ return sortedNumbers;
+}
+
+let sayi1 = 10;
+let sayi2 = 5;
+let sayi3 = 7;
+
+console.log("Sirali Hali: ", sirala(sayi1, sayi2, sayi3));
