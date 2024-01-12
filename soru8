@@ -1,0 +1,41 @@
+
+İndirmek
+Kodu kopyala
+function add(x, y) {
+    return x + y;
+}
+
+function subtract(x, y) {
+    return x - y;
+}
+
+function multiply(x, y) {
+    return x * y;
+}
+
+function divide(x, y) {
+    return x / y;
+}
+
+function performOperation(operator, x, y) {
+    switch (operator) {
+        case '+':
+            return toplama(x, y);
+        case '-':
+            return çıkarma(x, y);
+        case '*':
+            return çarpma(x, y);
+        case '/':
+            return bölme(x, y);
+        default:
+            return 'Geçersiz operatör';
+    }
+}
+
+let num1 = prompt('birinci sayiyi giriniz: ');
+let num2 = prompt('İkinci numarayı girin: ');
+let operator = prompt('Operatör girin (+, -, *, /): ');
+
+let result = performOperation(operator, sayi1, sayi2);
+
+console.log(`Result: ${result}`);
