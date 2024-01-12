@@ -1,25 +1,32 @@
-public class KDVHesaplama {
+
+
+public class HarfNotuHesaplama {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Fiyatı girin: ");
-        double Fiyat = scanner.nextDouble();
+        System.out.println("Sinav notunu giriniz: ");
+        double not = scanner.nextDouble();
 
-        double kdvOran = 0.10;
-        double kdv = 0;
-        double kdvlıFiyat= 0;
-
-        if (Fiyat >= 0 && Fiyat <= 1000) {
-            kdv = Fiyat * kdvOran;
-            kdvlıFiyat = Fiyat + kdv;
-        } else if (Fiyat > 1000) {
-            kdvOran = 0.22;
-            kdv = Fiyat * kdvOran;
-            kdvlıFiyat = Fiyat + kdv;
+        if (not >= 90) {
+            System.out.println("Harf notu: AA");
+        } else if (not >= 85) {
+            System.out.println("Harf notu: BA");
+        } else if (not >= 80) {
+            System.out.println("Harf notu: BB");
+        } else if (not >= 75) {
+            System.out.println("Harf notu: CA");
+        } else if (not >= 70) {
+            System.out.println("Harf notu: CB");
+        } else if (not >= 65) {
+            System.out.println("Harf notu: CC");
+        } else if (not >= 60) {
+            System.out.println("Harf notu: DC");
+        } else if (not >= 55) {
+            System.out.println("Harf notu: DD");
+        } else if (not >= 50) {
+            System.out.println("Harf notu: FD");
+        } else {
+            System.out.println("Harf notu: FF");
         }
-
-        System.out.println("Fiyat: " + Fiyat);
-        System.out.println("KDV Oran: " + kdvOran);
-        System.out.println("KDV: " + kdv);
-        System.out.println("Fiyat ve KDV: " + kdvlıFiyat);
     }
 }
