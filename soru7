@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Weather {
+    public static void mainString[] args) {
+        Scanner scanner = new Sc(System.in);
+        System.out.print("Hava durumu kodunu girin: ");
+        int code = scanner.nextInt();
+
+        switch (code) {
+            case 1:
+                System.out.println("güneşli");
+                break;
+            case 2:
+                System.out.println("Soğuk");
+                break;
+            case 3:
+                System.out.println("Yağmurlu");
+                break;
+            case 4:
+                System.out.println("kar yağışlı");
+                break;
+            default:
+                System.out.println("Geçersiz hava durumu kodu");
+        }
+
+        scanner.close();
+    }
+}
